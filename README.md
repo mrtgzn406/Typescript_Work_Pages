@@ -30,7 +30,7 @@ Typescript dosyalarına yazdığımız kodların hangi javascript sürümüne ç
     tsc deneme1.ts            // ilgili klasörde ismini yazdığımız .ts dosyasını aynı isimle .js dosyasına derler
 
 
-    tsc --watch, -w             // Mevcut klasördeki tüm .ts dosyalarını izler, izlemekten kasıt şudur: Eğer klasördeki .ts dosyalarında herhangi bir değişiklik yapar ve değişikliği kaydedersek, bunu typescript direkt .js dosyasına derler. Ayrıca izlenen klasördeki herhangi bir .ts dosyasında değişiklik olursa , typescript sadece o dosyayı .js dosyasına derlemez, klasörde bulunan bütün .ts dosyalarını derler.
+    tsc --watch, -w             // Mevcut klasördeki tüm .ts dosyalarını izler, izlemekten kasıt şudur: Eğer klasördeki .ts dosyalarında herhangi bir değişiklik yapar ve değişikliği kaydedersek o typescript dosyası direkt javascript dosyasına derlenir.
     Not: Bu komut ilk çalıştırıldığında tüm .ts dosyalarını .js dosyasına direkt derler, ondan sonra izlemeye başlar. 
 
     tsc --watch deneme1.ts      // Bir .ts dosyasını izlemeyi sağlar.

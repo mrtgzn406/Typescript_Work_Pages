@@ -3,7 +3,6 @@ function yazdir(isim, soyisim, yas, gectiMi) {
     return `Bu şahsın ismi ${isim}, soyismi ${soyisim}, yaşı ${yas}'dir ve sınıfı ${gectiMi == true ? "geçmiştir" : "geçememiştir"}`;
 }
 console.log(yazdir("aygül", "nazlı", 46, false));
-// yazdir("ahmet", "gözen",84);
 // todo Typescript'te fonksiyon tanımlaması yaparken onların parametrelerine veri tipi atayabiliriz. 
 // --------------------------------------------------------------------------------------
 function notHesapla(vize, final) {
@@ -69,6 +68,5 @@ let deneme2 = {
     yas : "97"
 }
 bu nesneyi de yukarıdaki kisi_bilgisi(); isimli fonksiyonun gerçek parametresine yazamayız çünkü yas özelliğinin "value" kısmındaki değer string ifadesiyle "97" olarak girilmiştir, oysaki kisi_bilgisi(); bunun number veri tipinde girilmesini istiyordu, o yüzden hata verir.
-
  */
 // ! Not: Lakin eğer bir nesne çok fazla özelliğe (property) sahipse o zaman artık o nesne böyle fonksiyon parametresi olarak yazılamaz hâle gelir, böyle yazılması kontroü zorlaştırır. Bu durumda artık fonksiyonun içine nesne yazmayız, bunun yerine interface'leri kullanırız.
