@@ -100,7 +100,7 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */,
     // "rootDir": "./ts_dosyalari",
-    "outDir": "./js_dosyalari",
+    "outDir": "./derlenen_js_dosyalari",
     // "rootDirs": ["./ts_dosyalari", "./ornek_proje1"],
 
     
