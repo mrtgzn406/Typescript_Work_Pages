@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.amerika = void 0;
 const anasayfa_1 = require("./anasayfa");
 class amerika extends anasayfa_1.ortak_ozellik {
-    constructor() {
-        super(...arguments);
+    constructor(adi, paraBirimi, populasyon) {
+        super(adi, paraBirimi, populasyon);
         this.eyaletler = ["ohio", "new york", "washington"];
     }
     ekonomisi_neye_bagli() {

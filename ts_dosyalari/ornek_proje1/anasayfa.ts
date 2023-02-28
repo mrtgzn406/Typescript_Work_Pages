@@ -1,6 +1,7 @@
-import { ingiltere } from "./ingiltere";
+
 import { amerika } from "./amerika";
 import { arayuz } from "./arayuz";
+import { ingiltere } from "./ingiltere";
 
 export abstract class ortak_ozellik implements arayuz{
     adi: string;
@@ -16,10 +17,12 @@ export abstract class ortak_ozellik implements arayuz{
     abstract ekonomisi_neye_bagli(): any;
 }
 
-const ingiltere1 = new ingiltere("Birleşik Krallık", "sterlin", 74564200);
+// ! Aşağıdaki şu kodları yorumdan çıkarıp etkin hâle getirdiğimizde Typescript'te bir hata vermiyor ama kodlar javascript'te derlendiğinde javascript dosyası çalışmıyor
+
+let ingiltere1 = new ingiltere("Birleşik Krallık", "sterlin", 74564200);
 ingiltere1.ekonomisi_neye_bagli();
 
-const amerika1 = new amerika("Amerika Birleşik Devletleri", "ABD Doları", 340500642);
+let amerika1 = new amerika("Amerika Birleşik Devletleri", "ABD Doları", 340500642);
 amerika1.ekonomisi_neye_bagli();
 
 

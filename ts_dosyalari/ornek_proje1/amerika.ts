@@ -1,6 +1,11 @@
 import { ortak_ozellik } from "./anasayfa";
 
+
 export class amerika extends ortak_ozellik{
+
+    constructor(adi: string, paraBirimi: string, populasyon: number) {
+        super(adi, paraBirimi, populasyon);
+    }
 
     eyaletler: string[] = ["ohio", "new york", "washington"];
 
