@@ -99,9 +99,9 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */,
-    "rootDir": "./ts_dosyalari",
+    // "rootDir": "./ts_dosyalari",
     "outDir": "./js_dosyalari",
-    // "rootDirs": ["./ts_dosyalari", "./ts_dosjhdoasf2"],
+    // "rootDirs": ["./ts_dosyalari", "./ornek_proje1"],
 
     
     
