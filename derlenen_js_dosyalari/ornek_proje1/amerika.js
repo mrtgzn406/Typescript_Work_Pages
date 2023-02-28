@@ -8,8 +8,10 @@ class amerika extends anasayfa_1.ortak_ozellik {
         this.eyaletler = ["ohio", "new york", "washington"];
     }
     ekonomisi_neye_bagli() {
-        console.log(`ABD'nin resmi adı ${this.adi}, para birimi ${this.paraBirimi}, nüfusu ise ${this.populasyon}`);
-        console.log(...(this.eyaletler));
+        console.log(`ABD ekonomisi çoğunlukla hizmet sektörüne bağlıdır.`);
+    }
+    ozellikleri_getir() {
+        console.log(`ABD'nin resmi adı ${this.adi}, para birimi ${this.paraBirimi}, nüfusu ise ${this.populasyon} kişidir`);
     }
 }
 exports.amerika = amerika;

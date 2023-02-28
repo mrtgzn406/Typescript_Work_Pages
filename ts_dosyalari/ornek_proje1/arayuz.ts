@@ -1,4 +1,4 @@
-interface arayuz {
+export interface arayuz {
     adi : string;
     paraBirimi : string;
     populasyon : number;

@@ -1,5 +1,6 @@
-import {ingiltere} from "./ingiltere";
-import {amerika} from "./amerika";
+import { ingiltere } from "./ingiltere";
+import { amerika } from "./amerika";
+import { arayuz } from "./arayuz";
 
 export abstract class ortak_ozellik implements arayuz{
     adi: string;
