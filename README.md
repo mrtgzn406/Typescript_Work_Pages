@@ -36,6 +36,13 @@ Typescript dosyalarına yazdığımız kodların hangi javascript sürümüne ç
     tsc --watch deneme1.ts      // Bir .ts dosyasını izlemeyi sağlar.
 
 
+    tsc -out sonuc.js ortak.ts ogretmen.ts 
+    
+    Bu komut ise içerisinde modül olmayan, (yani içerisinde import , export işlemleri yapılmamış)  birden çok typscript dosyasını birleştirip tek bir javascript dosyası içine derlemeye yarar. Böylelikle farklı typescript dosyaları içinde bulunan bir çok bileşeni (fonksiyonlar, değişkenler, class'lar gibi) tek bir javascrit sayfasında birleştirmiş oluruz.
+
+    Bu komuttaki "tsc" klasik derleme işlemi için, "-out" typescript dosyalarını birleştirip tek bir javascript dosyası olarak çıkartmak için kullanılır,  "-out" komutundan sonra yazdığımız "sonuc.js" ifadesi çıkartılacak javascript dosyasının adını belirtirken , "sonuc.js" ifadesinden sonra yazdığımız "ortak .ts ogretmen.ts" ifadesi ise hangi typescript dosyalarının birleştirilip derleneceğini belirtir, istenildiği kadar typescript dosyası yazılabilir. 
+
+
 
 
 
