@@ -7,16 +7,21 @@ Son olarak Typescript , kendi içerisine yazılan kodları javascript'in 2016 y�
 
 Typescript dosyalarına yazdığımız kodların hangi javascript sürümüne çevrileceğini belirtmek için "tsconfig.json" isimli dosyayı kullanmamız gerekiyor, yine aynı şekilde typescript'in nereye .js uzantılı dosyaları çıkartacağını belirtmek için  ve hangi klasörde bulunan .ts dosyalarının derleyeceği belirtmek için de aynı dosyayı kullanmalıyız.
 
-    Not: Bu "tsconfig.json" dosyasının üretilebilmesi için komut satırını .ts ve .js uzantılı dosyaları bulundurduğumuz klasör yolunda açarız ve komut satırına "tsc --init" yazarız. Böylelikle o dosya ilgili klasör içinde oluşur
+<b>Not:</b> Bu "tsconfig.json" dosyasının üretilebilmesi için komut satırını .ts ve .js uzantılı dosyaları bulundurduğumuz klasör yolunda açarız ve komut satırına "tsc --init" yazarız. Böylelikle o dosya ilgili klasör içinde oluşur. İşte bu tsconfig.json dosyası varsayılan olarak o klasörde typescript dosyalarının nasıl derleneceğini ayarlar. Örneğin bu tsconfig.json dosyasının kodlarında bazı ayarlamalar yapmışsak ve daha sonra bambaşka bir klasöre geçip orada typescript dosyalarıyla çalışıyorsak, bu tsconfig.json dosyasındaki ayarlar o klasöre etki etmez. O klasör için de yine "tsc --init" yazıp tsconfig.json dosyasını o klasör içinde oluşturmalıyız. 
 
-//****************************************************************************** */
+<hr style= "border-bottom: 5px solid red;">
 
-## Typescript'in bilgisayarımıza kurulumu şu şekildedir: 
+<br>
 
-    ilk önce biz bilgisayarımıza Typescript kurulumunu yapmak için  Node.js framework'ünün indiririz (LTS versiyonu),
-    Link: https://nodejs.org/en/
+## Typescript'in Bilgisayarımıza Kurulumu
+
+    ilk önce biz bilgisayarımıza Typescript kurulumunu yapmak için  Node.js framework'ünün indirmemiz gerek (LTS versiyonu),
+    İndirme linki: https://nodejs.org/en/
 
     Ardından komut satırını açarız ve oraya "npm install global typescript" yazarız. Böylelikle typescript bilgisayarımıza inmiş olur.  
+
+<hr style= "border-bottom: 5px solid yellow;">
+
 
 ## Typescript'in Temel CLI (command line interface) Komutları 
 
@@ -36,15 +41,10 @@ Typescript dosyalarına yazdığımız kodların hangi javascript sürümüne ç
     tsc --watch deneme1.ts      // Bir .ts dosyasını izlemeyi sağlar.
 
 
-    tsc -out sonuc.js ortak.ts ogretmen.ts 
-    
-    Bu komut ise içerisinde modül olmayan, (yani içerisinde import , export işlemleri yapılmamış)  birden çok typscript dosyasını birleştirip tek bir javascript dosyası içine derlemeye yarar. Böylelikle farklı typescript dosyaları içinde bulunan bir çok bileşeni (fonksiyonlar, değişkenler, class'lar gibi) tek bir javascrit sayfasında birleştirmiş oluruz.
 
-    Bu komuttaki "tsc" klasik derleme işlemi için, "-out" typescript dosyalarını birleştirip tek bir javascript dosyası olarak çıkartmak için kullanılır,  "-out" komutundan sonra yazdığımız "sonuc.js" ifadesi çıkartılacak javascript dosyasının adını belirtirken , "sonuc.js" ifadesinden sonra yazdığımız "ortak .ts ogretmen.ts" ifadesi ise hangi typescript dosyalarının birleştirilip derleneceğini belirtir, istenildiği kadar typescript dosyası yazılabilir. 
+<hr style= "border-bottom: 5px solid red;">
 
-
-
-
+<br>
 
 ## Typescript'in Konfigürasyonunu Yaptığımız "tsconfig.json" Dosyasının Kodları
 
@@ -57,16 +57,105 @@ Typescript dosyalarına yazdığımız kodların hangi javascript sürümüne ç
     "outDir": "./js_dosyalari"          // Typescript'in .js dosyalarını hangi klasöre çıkartacağını belirtir.
 
 
-## Ekstralar : 
-
-    node deneme1.js           // Bir javascript dosyasını komut satırında çalıştırır ve çıktısı gösterir.
 
 
+<hr style= "border-bottom: 5px solid red;">
+
+<br>
 
 ## Typescript'in Tüm Komutlarını Görmek 
 
     Typescrip'in  komutlarını ve onların açıklaması için komut satırına  "tsc --help" yazarız,
     Typescrip'in tüm komutlarını ve onların açıklaması için ise komut satırına "tsc --help --all" yazarız.
 
+<hr style= "border-bottom: 5px solid red;">
+
+<br>
+
+## Modül Olmayan Typescript Sayfalarını Tek Bir Typescript veya Javascript Dosyasına Derlemek
+
+    Not: "Modül Olmayan" ifadesinden kasıt "export, import, extends, implements" gibi komutlarla birbirine bağlanmamış ts sayfalarıdır, eğer  bu tür komutlarla javascript sayalarına birbirine bağımlı hale  getirmişsen bu birleştirip derleme işlemi gerçekleşmez . 
+
+    tsc --out sonuc.js ortak.ts ogretmen.ts 
+    
+    Bu komut ise içerisinde modül olmayan, (yani içerisinde import , export işlemleri yapılmamış)  birden çok typscript dosyasını birleştirip tek bir javascript dosyası içine derlemeye yarar. Böylelikle farklı typescript dosyaları içinde bulunan bir çok bileşeni (fonksiyonlar, değişkenler, class'lar gibi) tek bir javascrit sayfasında birleştirmiş oluruz.
+
+    Bu komuttaki "tsc" klasik derleme işlemi için, "-out" typescript dosyalarını birleştirip tek bir javascript dosyası olarak çıkartmak için kullanılır,  "-out" komutundan sonra yazdığımız "sonuc.js" ifadesi çıkartılacak javascript dosyasının adını belirtirken , "sonuc.js" ifadesinden sonra yazdığımız "ortak .ts ogretmen.ts" ifadesi ise hangi typescript dosyalarının birleştirilip derleneceğini belirtir, istenildiği kadar typescript dosyası yazılabilir. 
 
 
+    tsc --out sonuc.ts ortak.ts ogretmen.ts 
+
+    Bu komut ise aslında yukarıdaki komutun aynısıdır, sadece derlenen ve birleştirilen typescript sayfalarını  bir javscript dosyasına derlemez de , bir typescript dosyasına derler o kadar.
+
+<hr style= "border-bottom: 5px solid yellow;">
+
+<br>
+
+## Webpack Kullanılarak Modül Olan Typescript Sayfalarının Tek JavaScript Dosyası Olarak Derlenmesi
+
+<b>1.) Gerekli bağımlılıkları indirin:<br/>
+
+    npm install webpack webpack-cli ts-loader typescript --save-dev
+
+<b>2.) Aşağıdaki yapılandırma ile projenizin kök dizininde bir "tsconfig.json" dosyası oluşturun:</b>
+
+    {
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es6",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "sourceMap": true,
+        "strict": true
+    }
+    }
+
+Bu yapılandırma, çıktı dizinini "./dist" olarak ayarlar ve TypeScript modüllerinin ES6 modül biçiminde çıkarılacağını belirtir.
+
+
+<b>3.) Aşağıdaki yapılandırma ile projenizin kök dizininde bir "webpack.config.js" dosyası oluşturun:</b>
+
+    const path = require('path');
+
+    module.exports = {
+    entry: './src/index.ts',
+    mode: 'production',
+    devtool: 'source-map',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
+    module: {
+        rules: [
+        {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/
+        }
+        ]
+    }
+    };
+
+    
+Bu yapılandırma giriş noktasını "./src/index.ts" olarak ayarlar, çıktı dosya adını "bundle.js" olarak belirtir, çıktı dizinini "./dist" olarak ayarlar ve Webpack'e TypeScript ve JavaScript dosyalarını ".ts" ve ".js" uzantıları. Ayrıca Webpack'e *.ts veya *.tsx kalıbıyla eşleşen dosyalar için "ts-loader" kullanmasını söyler.
+
+<b>4.) Projenizin "src" dizininde bir "index.ts" dosyası oluşturun. Bu dosya, uygulamanız için gerekli tüm modülleri ve bağımlılıkları içe aktarmalıdır.</b>
+
+<b>5.) Webpack komutunu terminalinizde çalıştırın:</b>
+
+    npx webpack --config webpack.config.js
+
+Bu, tüm TypeScript modüllerini ve bağımlılıklarını "dist" dizininde bulunan tek bir JavaScript dosyasında derleyecektir.
+
+Bu kadar! Artık tüm TypeScript modüllerinizi içeren, Webpack kullanılarak oluşturulmuş tek bir JavaScript dosyanız var.
+
+<hr style= "border-bottom: 5px solid red;">
+
+<br>
+
+## Önemli Ekstralar : 
+
+    node deneme1.js           // Bir javascript dosyasını komut satırında çalıştırır ve çıktısı gösterir.

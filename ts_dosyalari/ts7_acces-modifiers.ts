@@ -94,7 +94,7 @@ class bisiklet3 extends ortak3 {
     elektrikliMi!: boolean;
 }
 
-const murat = new telefon3("Iphone", "AC5846YU", 10000);
+const murat3 = new telefon3("Iphone", "AC5846YU", 10000);
 // burada hata verdi çünkü biz private ile tanımlanmış class'ın özelliğine dışarıdan erişmeye çalıştık.
 
 
