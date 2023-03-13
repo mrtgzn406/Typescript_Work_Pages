@@ -50,6 +50,6 @@ class telefon3 extends ortak3 {
 }
 class bisiklet3 extends ortak3 {
 }
-const murat = new telefon3("Iphone", "AC5846YU", 10000);
+const murat3 = new telefon3("Iphone", "AC5846YU", 10000);
 // burada hata verdi çünkü biz private ile tanımlanmış class'ın özelliğine dışarıdan erişmeye çalıştık.
 // todo "private" keyword'ü class içinde, class'ın herhangi bir elemanının, metodunun önüne yazılır ve onu kapalı yapar, yani private ile tanımlanmış bir class özelliğine sadece o class'ın kendi içerisinden erişilebilir. Bunun dışında private özelliklere dışarıdan da, o  class'tan türetilmiş  alt class'lar (subclass) içinden de erişilemez.
